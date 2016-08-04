@@ -1,0 +1,29 @@
+{
+ "name":"hello world",
+ "manifest_version":2,
+ "version":"1.0",
+ "description":"my first chrome extension",
+
+ "browser_action":{
+ "default_icon":"icon.png",
+ "default_popup":"p.html"
+  },
+  "icons":{
+	"64":"icon.png",
+	"16":"icon.png"
+  },
+  "permissions": [
+  "activeTab"
+],
+
+ "content_scripts": [
+    {
+      "matches": ["https://*/*","http://*/*"],
+      
+      "js": ["java.js"]
+    }
+  ]
+  
+}
+
+  
